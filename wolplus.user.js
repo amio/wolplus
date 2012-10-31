@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WOL.Plus
 // @namespace    http://www.airmio.com/
-// @version      0.2.2
+// @version      0.2.3
 // @description  将WOL中鼠标指向技能的英文说明替换为中文说明
 // @match        http://www.worldoflogs.com/*
 // @updateURL    https://github.com/amio/wolplus/raw/master/wolplus.meta.js
@@ -14,9 +14,9 @@
 
 	// List to inject
 	var injects = [
-		{type: 'script', attrs: {type: 'text/javascript', src: 'https://github.com/amio/wolplus/raw/master/wolplus.js'}},
+		{type: 'script', attrs: {type: 'text/javascript', src: 'http://amio.github.com/wolplus/host/wolplus.js'}},
 		{type: 'link', attrs: {rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Open+Sans'}},
-		{type: 'link', attrs: {rel: 'stylesheet', type: 'text/css', href: 'https://github.com/amio/wolplus/raw/master/wolplus.css'}}
+		{type: 'link', attrs: {rel: 'stylesheet', type: 'text/css', href: 'http://amio.github.com/wolplus/host/wolplus.css'}}
 	];
 
 	// Inject function

@@ -1,4 +1,2 @@
-/* Load Open Fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
+/* Global style */
 #wrapper { font-family: "Open Sans", "Calibri", "Verdana", sans-serif; }

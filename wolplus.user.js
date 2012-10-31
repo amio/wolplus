@@ -10,27 +10,32 @@
 // @run-at       document-start
 // ==/UserScript==
 
-;'use strict';
-(function(){
+(function () {
 
 	// List to inject
 	var injects = [
-		'script>https://github.com/amio/wolplus/raw/master/wolplus.js',
-		'style>https://github.com/amio/wolplus/raw/master/wolplus.css'
+		{type: 'script', attrs: {type: 'text/javascript', src: 'https://github.com/amio/wolplus/raw/master/wolplus.js'}},
+		{type: 'link', attrs: {rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Open+Sans'}},
+		{type: 'link', attrs: {rel: 'stylesheet', type: 'text/css', href: 'https://github.com/amio/wolplus/raw/master/wolplus.css'}}
 	];
 
-	var head = document.querySelector('head'),
-		TMPL = {
-			script: '<script type="text/javascript" src="{$src}"></script>',
-			style : '<link rel="stylesheet" type="text/css" href="{$src}" />'
-		};
-
-	if (head) {
-		var fragment = document.createElement('div');
-		for(var i = injects.length, item; i--;){
-			item = injects[i].split('>');
-			fragment.innerHTML = TMPL[item[0]].replace('{$src}',item[1]);
-			head.appendChild(fragment.firstChild);
+	// Inject function
+	var inject = function (parent, elemData) {
+		var elem = document.createElement(elemData.type);
+		for (var attr in elemData.attrs) {
+			elem[attr] = elemData.attrs[attr];
 		}
-	}
+		parent.appendChild(elem);
+	};
+
+	var head = document.querySelector('head');
+
+	// Inject Style immediately (document-start)
+	inject(head,injects[1]);
+
+	// Inject Script after document ready (document-end?)
+	// (anyway, if script inject at document-start, it won't share the same scope with local scrits )
+	window.addEventListener('DOMContentLoaded',function(){
+		inject(head,injects[0]);
+	},false);
 })();

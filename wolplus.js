@@ -1,14 +1,15 @@
 (function () {
-	'use strict';
 
 	/**
 	 * Inject translation
 	 */
+	var timeout = 100;
 	(function(){
 		if (window['$WowheadPower']) {
 				transTip(window['$WowheadPower']);
 			} else {
-				setTimeout(arguments.callee,200);
+				console.log(timeout);
+				setTimeout(arguments.callee,timeout += 50);
 			}
 	})();
 

@@ -1,2 +1,31 @@
 /* Global style */
+.root { width: 1240px }
 #wrapper { font-family: "Open Sans", "Calibri", "Verdana", sans-serif; }
+
+/* Header */
+#header { height: 80px }
+#header-logo img { height: 90% }
+#header-menu { font-size: 115%; border: 2px solid #444; border-bottom: none; background-color: #222 }
+#header-menu a { padding: 0 5px }
+#header-menu a:hover { text-decoration: none }
+
+div.menu > ul > li { display: inline-block; height: 25px }
+div.menu > ul > li > a { display: inline-block; height: 25px }
+#header-breadcrumbs { background: #555; height: 25px; box-shadow: inset 0px 0px 5px 2px rgba(9,9,9,0.2); margin: 0 -5px; padding: 0 }
+#header-breadcrumbs a { height: 25px; line-height: 25px; font-size: 105%; text-decoration: none; padding: 0 5px}
+#header-breadcrumbs a:hover { text-decoration: none; background-color: #234 }
+#header-breadcrumbs .menu { background: none }
+#header-breadcrumbs a + .menu { background: #444; margin: -1px 0 0 0 }
+#header-breadcrumbs .menu > a { padding: 0 15px 0 5px; background: url('http://media.worldoflogs.com/media/images/arrows/down-small-f80.png') 96% center no-repeat; }
+#header-breadcrumbs .menu > a:hover { background-color: #234 }
+#header-breadcrumbs li.menu { padding: 0 }
+
+/* Body */
+.ui-widget-content { border: none }
+
+/* Body : Sidebar */
+#sidebar { width: 343px !important; padding: 0 13px !important }
+#sidebar > div { padding: 0 !important }
+#sidebar > div > h3 { margin-left: -5px !important }
+
+.playerRankMixed { width: 100% }

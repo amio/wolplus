@@ -32,6 +32,7 @@
 
 	// Inject Style immediately (document-start)
 	inject(head,injects[1]);
+	inject(head,injects[2]);
 
 	// Inject Script after document ready (document-end?)
 	// (anyway, if script inject at document-start, it won't share the same scope with local scrits )

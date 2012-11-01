@@ -199,17 +199,15 @@ blockquote {
 }
 
 ul, ol, dl {
-  margin-bottom: 15px
+  margin: 0 0 15px 30px
 }
 
 ul li {
-  list-style: inside;
-  padding-left: 20px;
+  list-style: outside;
 }
 
 ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
+  list-style: decimal outside;
 }
 
 dl dt {
@@ -289,11 +287,11 @@ Full-Width Styles
 
 #header_wrap {
   background: #212121;
-  background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #444, #333);
-  background: -ms-linear-gradient(top, #373737, #212121);
-  background: -o-linear-gradient(top, #373737, #212121);
-  background: linear-gradient(top, #373737, #212121);
+  background: -moz-linear-gradient(top, #444, #222);
+  background: -webkit-linear-gradient(top, #444, #222);
+  background: -ms-linear-gradient(top, #444, #222);
+  background: -o-linear-gradient(top, #444, #222);
+  background: linear-gradient(top, #444, #222);
 }
 
 #header_wrap .inner {

@@ -15,7 +15,8 @@ div.menu > ul > li > a { display: inline-block; height: 25px }
 #header-breadcrumbs a { height: 25px; line-height: 25px; font-size: 105%; text-decoration: none; padding: 0 5px; border-right: 7px solid transparent}
 #header-breadcrumbs a:hover { text-decoration: none; background-color: #234 }
 #header-breadcrumbs .menu { background: none }
-#header-breadcrumbs a + .menu { background: #444; margin: -1px 0 0 0 }
+#header-breadcrumbs a + .menu { background: #444 }
+#header-breadcrumbs ul ul a + .menu { margin: -1px 0 0 0 }
 #header-breadcrumbs .menu > a { padding: 0 17px 0 7px; background: url('http://media.worldoflogs.com/media/images/arrows/down-small-f80.png') right center no-repeat; }
 #header-breadcrumbs .menu > a:hover { background-color: #234 }
 #header-breadcrumbs li.menu li.menu > a { background-image: url('http://media.worldoflogs.com/media/images/arrows/right-small-f80.png') }

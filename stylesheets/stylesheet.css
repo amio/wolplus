@@ -60,28 +60,30 @@ body {
   color:#373737;
   background: #212121;
   font-size: 16px;
-  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
   color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
-  letter-spacing: -1px;
+  font-family: 'Open Sans Condensed', Calibri, Helvetica, Arial, sans-serif;
 }
 
-h1 {
+h1 span.subtitle { font-weight: 300 }
+
+#main_content h1 {
   font-size: 36px;
   font-weight: 700;
+  padding: 20px 0;
+  border-bottom: 4px dotted #AAA;
 }
 
-h2 {
-  padding-bottom: 10px;
+#main_content h2 {
+  padding: 15px 0;
+  border-bottom: 2px dotted #BBB;
   font-size: 32px;
-  background: url('../images/bg_hr.png') repeat-x bottom;
 }
 
 h3 {
@@ -113,10 +115,10 @@ a {
   color: #007edf;
   text-shadow: none;
 
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
+  transition: color 0.1s ease;
+  transition: text-shadow 0.1s ease;
+  -webkit-transition: color 0.1s ease;
+  -webkit-transition: text-shadow 0.1s ease;
   -moz-transition: color 0.5s ease;
   -moz-transition: text-shadow 0.5s ease;
   -o-transition: color 0.5s ease;
@@ -127,12 +129,12 @@ a {
 
 #main_content a:hover {
   color: #0069ba;
-  text-shadow: #0090ff 0px 0px 2px;
+  text-shadow: rgba(0, 150, 175, 0.3) 0 0 2px;
 }
 
 footer a:hover {
   color: #43adff;
-  text-shadow: #0090ff 0px 0px 2px;
+  text-shadow: #0090ff 0 0 2px;
 }
 
 em {
@@ -163,14 +165,11 @@ pre, code {
   color: #222;
   background-color: #fff;
 
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  font-size: 14px;
+  font: 13px/1.2em Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-
-
 
 }
 
@@ -257,11 +256,6 @@ form {
   padding: 20px;
 }
 
-img {
-  width: 100%;
-  max-width: 100%;
-}
-
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
@@ -283,9 +277,10 @@ Full-Width Styles
   top:0;
   right: 10px;
   z-index: 10;
-  padding: 10px 50px 10px 10px;
+  padding: 8px 60px 8px 20px;
+    line-height: 25px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: url('../images/blacktocat.png') #0090ff no-repeat 90% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
@@ -295,7 +290,7 @@ Full-Width Styles
 #header_wrap {
   background: #212121;
   background: -moz-linear-gradient(top, #373737, #212121);
-  background: -webkit-linear-gradient(top, #373737, #212121);
+  background: -webkit-linear-gradient(top, #444, #333);
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(top, #373737, #212121);
@@ -304,6 +299,10 @@ Full-Width Styles
 #header_wrap .inner {
   padding: 50px 10px 30px 10px;
 }
+
+#header_wrap a { color: #FFF }
+#header_wrap a span { display: none }
+#header_wrap a:hover span { display: inline }
 
 #project_title {
   margin: 0;
@@ -367,7 +366,8 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 20px;
+  line-height: 1.8em;
 }
 
 #footer_wrap {
